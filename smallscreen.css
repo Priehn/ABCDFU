@@ -4,21 +4,29 @@
     padding: 0;
     --ci-blue: #18A0FB;
     --ci-grey: #dfdfdf;
-    ;
+    
 }
 nav {
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    z-index: 100;
     background-color: white;
-    height: 48px;
 }
 .links {
-    margin-left: 16px;
-    overflow: hidden;
+    width: 100%;
+    background: white;
+    z-index: 99;
     text-decoration: none;
     display: none;
+    color: var(--ci-blue);
 }
-div .graphics {
+.graphics {
+    position: absolute;
+    top: 48px;
+    z-index: -100;
     width: 100%;
-    height: calc((9*vw)/16);
+    height: calc( 100vw * 0.5625 );
     background: gold; /** <-- For the demo **/
   }
 
@@ -27,18 +35,15 @@ canvas {
     height:100%;
 }
 i {
+    position: absolute;
+    top: -40px;
+    left: 16px;
     color: black;
     display: block;
-    margin-left: 16px;
-    margin-top: 8px;
-
+ 
 }
 ul {
     font-family: 'Montserrat', sans-serif;
     font-size: 24pt;
     list-style: none;
 }
-li {
-    text-decoration: none;
-    color: var(--ci-blue);
-}   
