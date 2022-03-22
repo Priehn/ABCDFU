@@ -20,7 +20,6 @@
 }
 h1 {
 	width: 300px;
-
 	font-size: 32pt;
 	padding: 8px;
 	column-gap: 1.5rem;
@@ -42,14 +41,25 @@ main {
 	justify-content: space-between;
 }
 
-p.inoffensiveHeadline {
-	margin-left: auto;
-	margin-right: auto;
-	width: 300px;
-	padding: 16px;
-	font-size: 10vw;
+button.inoffensiveButton {
+	z-index: 99;
+	font-size: 2vw;
+	color: white;
+	background: var(--ci-blue);
+	margin-top: 4vw;
+	margin-left: 5vw;
+	width: 16vw;
+	height: 5vw;
+	border: none;
+	border-radius: 0.4vw;
 }
-p {
+p.inoffensiveHeadline {
+	z-index: 100;
+	margin-left: 5vw;
+	margin-top: 13vw;
+	font-size: 4vw;
+}
+p.boringnews {
 	width: 300px;
 	padding: 16px;
 	font-size: 16pt;
@@ -61,7 +71,6 @@ p {
 	grid-template-columns: 50% 50%;
 }
 .inoffensivecontent {
-	font-size: 30pt;
 	height: 50vw;
 	background-color: white;
 }

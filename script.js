@@ -61,7 +61,7 @@ function drawVideoScreen() {
 			height = cv.height;
 
 		const ctx = cv.getContext('2d');
-		const a = height / 15;
+		const a = height / 20;
 		const ri = ((3 * a) / 4) * Math.sqrt(3);
 		const h = Math.sqrt(a * a - a * a * 0.25);
 		ctx.rect(0, 0, width, height);
@@ -92,6 +92,23 @@ function drawVideoScreen() {
 		ctx.lineTo(width / 2 - h * 0.5 + mi, height / 2);
 		ctx.closePath();
 		ctx.fill();
+		ctx.font = '6.5vw Montserrat';
+		ctx.textAlign = 'center';
+		ctx.fillStyle = '#000000';
+		ctx.fillText(
+			'Nothing to see here, move along!',
+			width / 2,
+			height * 0.7
+		);
+		ctx.beginPath();
+		ctx.rect(width / 2 - width / 16, height * 0.75, width / 8, height / 18);
+		ctx.fillStyle = ciBlue;
+		ctx.fill();
+		ctx.closePath();
+		ctx.font = '3vw Montserrat';
+		ctx.textAlign = 'center';
+		ctx.fillStyle = '#ffffff';
+		ctx.fillText('Go Away!', width / 2, height * 0.75 + 0.036 * height);
 	}
 }
 
