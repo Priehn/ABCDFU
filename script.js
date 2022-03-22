@@ -1,58 +1,111 @@
-const dpi = window.devicePixelRatio;
-const cv = document.querySelector('#myCanvas');
-console.log(cv);
-const div = document.querySelector('.graphics')
-const style_height = window.getComputedStyle(cv).getPropertyValue("height").slice(0, -2);
+const ciGray = '#dfdfdf',
+	ciBlue = '#18A0FB';
 
-const style_width = window.getComputedStyle(cv).getPropertyValue("width").slice(0, -2);
-cv.setAttribute('height', style_height*dpi);
-cv.setAttribute('width', style_width*dpi);
+function drawInoffensiveContent() {
+	const cw = document.querySelectorAll('.iocv');
+	console.log(cw);
+	if (cw != null) {
+		for (let cv of cw) {
+			const dpi = window.devicePixelRatio;
+			const style_height = window
+				.getComputedStyle(cv)
+				.getPropertyValue('height')
+				.slice(0, -2);
 
-console.log("canvas: "+cv.width);
-const ciGray = '#dfdfdf', ciBlue = '#18A0FB';
-console.log("cv dimensions: "+cv.width+", "+cv.height);
-const ctx = cv.getContext('2d');
+			const style_width = window
+				.getComputedStyle(cv)
+				.getPropertyValue('width')
+				.slice(0, -2);
 
-function drawVideoScreen(ctx, width, height) {
-    ctx.beginPath();
-    ctx.rect(0, 0, width, height);
-    ctx.fillStyle = ciGray;
-    ctx.fill();
-    ctx.closePath();
-    ctx.moveTo(0, 0);
-    ctx.lineTo(width, 0);
-    ctx.lineTo(width, height);
-    ctx.lineTo(0, height);
-    ctx.lineTo(0, 0);
-    ctx.lineTo(width, height);
-    ctx.moveTo(width, 0);
-    ctx.lineTo(0, height);
-    ctx.strokeStyle = '#000000';
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.arc(width/2, height/2, height/15,0,  Math.PI*2);
-    ctx.fillStyle = ciBlue;
-    ctx.fill();
-    ctx.fillStyle = '#FFFFFF';
-    ctx.moveTo(width/2, height/2);
-    ctx.closePath();
+			cv.setAttribute('height', style_height * dpi);
+			cv.setAttribute('width', style_width * dpi);
+			const width = cv.width,
+				height = cv.height;
+
+			const ctx = cv.getContext('2d');
+
+			ctx.rect(0, 0, width, height);
+			ctx.fillStyle = ciGray;
+			ctx.fill();
+			ctx.moveTo(0, 0);
+			ctx.lineTo(width, 0);
+			ctx.lineTo(width, height);
+			ctx.lineTo(0, height);
+			ctx.lineTo(0, 0);
+			ctx.lineTo(width, height);
+			ctx.moveTo(width, 0);
+			ctx.lineTo(0, height);
+			ctx.strokeStyle = '#000000';
+			ctx.stroke();
+		}
+	}
 }
-drawVideoScreen(ctx,cv.width, cv.height);
-//ctx.drawImage(bcv, 0, 0, canvas.width, canvas.height);
-let links = document.getElementsByClassName("links");
 
-console.log("display: "+links[0].style.display);
-function myFunction() {
-    let links = document.getElementsByClassName("links");
-    console.log(links); //debug output
-    for (let i = 0; i<links.length; i++)
-        if (links[i].style.display == "block"){
-            links[i].style.display = "none";
-            console.log("invisible");
-        }
-        else{
-            links[i].style.display = "block";
-            console.log("visible");
-        }
+function drawVideoScreen() {
+	const cv = document.querySelector('#myCanvas');
+	if (cv != null) {
+		const dpi = window.devicePixelRatio;
+		const style_height = window
+			.getComputedStyle(cv)
+			.getPropertyValue('height')
+			.slice(0, -2);
 
-};
+		const style_width = window
+			.getComputedStyle(cv)
+			.getPropertyValue('width')
+			.slice(0, -2);
+
+		cv.setAttribute('height', style_height * dpi);
+		cv.setAttribute('width', style_width * dpi);
+		const width = cv.width,
+			height = cv.height;
+
+		const ctx = cv.getContext('2d');
+		const a = height / 15;
+		const ri = ((3 * a) / 4) * Math.sqrt(3);
+		const h = Math.sqrt(a * a - a * a * 0.25);
+		ctx.rect(0, 0, width, height);
+		ctx.fillStyle = ciGray;
+		ctx.fill();
+		ctx.moveTo(0, 0);
+		ctx.lineTo(width, 0);
+		ctx.lineTo(width, height);
+		ctx.lineTo(0, height);
+		ctx.lineTo(0, 0);
+		ctx.lineTo(width, height);
+		ctx.moveTo(width, 0);
+		ctx.lineTo(0, height);
+		ctx.strokeStyle = '#000000';
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.arc(width / 2, height / 2, height / 15, 0, Math.PI * 2);
+		ctx.fillStyle = ciBlue;
+		ctx.fill();
+		ctx.closePath();
+		ctx.fillStyle = '#FFFFFF';
+		ctx.beginPath();
+		const mi = h / 10;
+		ctx.moveTo(width / 2 - h * 0.5 + mi, height / 2);
+		ctx.lineTo(width / 2 - h * 0.5 + mi, height / 2 + a * 0.5);
+		ctx.lineTo(width / 2 + h * 0.5 + mi, height / 2);
+		ctx.lineTo(width / 2 - h * 0.5 + mi, height / 2 - a * 0.5);
+		ctx.lineTo(width / 2 - h * 0.5 + mi, height / 2);
+		ctx.closePath();
+		ctx.fill();
+	}
+}
+
+drawVideoScreen();
+drawInoffensiveContent();
+function toggleMenu() {
+	let links = document.getElementsByClassName('links');
+	console.log(links); //debug output
+	for (let i = 0; i < links.length; i++)
+		if (links[i].style.display == 'block') {
+			links[i].style.display = 'none';
+			console.log('invisible');
+		} else {
+			links[i].style.display = 'block';
+			console.log('visible');
+		}
+}
