@@ -2,166 +2,145 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This site isn't in any way affiliated to Wild Code School</title>
-    <script src="script.js" defer></script>
-    <!-- <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css"> -->
-    <!-- <link rel="stylesheet"  media="screen and (max-width: 600px)" href="smallscreen.css"> -->
-    <!--  media="screen and (max-width: 600px)"-->
-    <link rel="stylesheet" href="smallscreen.css" />
-    <!--  media="screen and (max-width: 600px)"-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="figma.css" />
-  </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This site isn't in any way affiliated to Wild Code School</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="smallscreen.css" media="screen and (max-width: 600px)" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="figma.css" media="screen and (min-width: 600px)" />
+</head>
 </head>
 
 <header>
-    <div class="wrapper site-header__wrapper">
-    <a href="#" class="brand">NO LOGO !</a>
+  <div class="wrapper site-header__wrapper">
     <nav class="nav">
-      <button class="nav__toggle" aria-expanded="false" type="button">
-        menu
-      </button>
-      <ul class="nav__wrapper">
-        <li class="nav__item"><a href="#index.html">Home</a></li>
-        <li class="nav__item"><a href="#products.html">No Products</a></li>
-        <li class="nav__item"><a href="#notaboutus.html">Not About Us</a></li>
-        <li class="nav__item"><a href="#impressum.html">Impressum</a></li>
-        <li class="nav__item"><a href="#signup.html">Sign Up</a></li>
+      <div id="burger"><a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i></a>
+      </div>
+
+      <ul class="nav__wrapper links">
+        <li class="nav__item menulink"><a href="index.html">Home</a></li>
+        <li class="nav__item menulink"><a href="products.html">No&nbsp;Products</a></li>
+        <li class="nav__item menulink"><a href="notaboutus.html">Not&nbsp;About&nbsp;Us</a></li>
+        <li class="nav__item menulink"><a href="impressum.html">Impressum</a></li>
+        <li class="nav__item menulink"><a href="signup.html">Sign&nbsp;Away</a></li>
       </ul>
     </nav>
   </div>
-    <h1>Free your mind like never before</h1>
 </header>
 
 <body>
-    <div class="nav">
-        <div id="burger"><a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-                <i class="fa fa-bars"></i></div>
-        <div class="links">
-            <ul>
-                <li><a href="nothingtoseehere.html" class="menulink">Nothing to see here</a></li>
-                <li><a href="index.html" class="menulink">Free your mind</a></li>
-                <li><a href="inoffensivecontent.html" class="menulink">Inoffensive content</a></li>
-                <li><a class="menulink">We don't support</a></li>
-                <li><a class="menulink">Not about us</a></li>
-            </ul>
-        </div>
+  <div class="nav">
+    <!-- <div class="links">
+      <ul>
+        <li><a href="nothingtoseehere.html" class="menulink">Nothing to see here</a></li>
+        <li><a href="index.html" class="menulink">Free your mind</a></li>
+        <li><a href="inoffensivecontent.html" class="menulink">Inoffensive content</a></li>
+        <li><a class="menulink">We don't support</a></li>
+        <li><a class="menulink">Not about us</a></li>
+      </ul> -->
+  </div>
 
-        <div class="graphics">
-            <canvas id="myCanvas"></canvas>
-        </div>
-        <div class="news">
-            <main>
-                <div>
+  <div class="graphics">
+    <canvas id="myCanvas"></canvas>
+  </div>
+  <div class="news">
+    <main>
+      <div>
 
-                    <article>
-                        <header>
-                            <h1>Free your mind like never before</h1>
-                        </header>
-                        <section>
-                            <h2>Leave everything behind</h2>
-                        </section>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                            invidunt
-                            ut
-                            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                            dolores
-                            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
-                    </article>
-                </div>
-                <article>
-                    <header>
-                        <h1>Free your mind like never before</h1>
-                    </header>
-                    <section>
-                        <h2>Leave everything behind</h2>
-                    </section>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut
-                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores
-                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
-                </article>
-                <article>
-                    <header>
-                        <h1>Free your mind like never before</h1>
-                    </header>
-                    <section>
-                        <h2>Leave everything behind</h2>
-                    </section>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut
-                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores
-                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
-                </article>
-                <article>
-                  
-                    <section>
-                        <h2>Leave everything behind</h2>
-                    </section>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut
-                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores
-                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
-                </article>
-                <article>
-                    <header>
-                        <h1>Free your mind like never before</h1>
-                    </header>
-                    <section>
-                        <h2>Leave everything behind</h2>
-                    </section>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut
-                        labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores
-                        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
-                </article>
-            </main>
+        <article>
+          <header>
+            <h1>Free your mind like never before</h1>
+          </header>
+          <section>
+            <h2>Leave everything behind</h2>
+          </section>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+            invidunt
+            ut
+            labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+            dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
+        </article>
+      </div>
+      <article>
+        <header>
+          <h1>Free your mind like never before</h1>
+        </header>
+        <section>
+          <h2>Leave everything behind</h2>
+        </section>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+          ut
+          labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+          dolores
+          et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
+      </article>
+      <article>
+        <header>
+          <h1>Free your mind like never before</h1>
+        </header>
+        <section>
+          <h2>Leave everything behind</h2>
+        </section>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+          ut
+          labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+          dolores
+          et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
+      </article>
+      <article>
+        <header>
+          <h1>Free your mind like never before</h1>
+        </header>
+        <section>
+          <h2>Leave everything behind</h2>
+        </section>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+          ut
+          labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+          dolores
+          et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
+      </article>
+    </main>
 
-        </div>
+  </div>
 </body>
 <footer class="site-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-6 col-md-3"></div>
-      </div>
-      <hr />
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-md-3"></div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">
-            Copyright &copy; You can tell everybody it is yours
-          </p>
-        </div>
+    <hr />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">
+          Copyright &copy; You can tell everybody it is yours
+        </p>
+      </div>
 
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <h3 class="donot">Do Not Follow Us</h3>
-          <ul class="social-icons">
-            <li>
-              <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-              <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
-            </li>
-            <li>
-              <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-            </li>
-          </ul>
-        </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <h3 class="donot">Do Not Follow Us</h3>
+        <ul class="social-icons">
+          <li>
+            <a class="facebook social" href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a class="twitter social" href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a class="dribbble social" href="#"><i class="fa fa-dribbble"></i></a>
+          </li>
+          <li>
+            <a class="linkedin social" href="#"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
 </html>
